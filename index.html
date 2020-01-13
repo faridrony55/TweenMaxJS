@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Gallery</title>
+  </head>
+  <body>
+
+  	<img src="images/web-programming.png" class="img-fluid code">
+
+  	<section class="banner"> 
+      <div id="particles"></div>
+  		<div class="container">
+  			 <div class="row  align-items-center justify-content-center">
+  			 	<div class="col-sm-8 text-center">
+  			 		<h1>Lorem Ipsum</h1>
+           <!--  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.</p> -->
+  			 	</div>
+  			 </div>
+  		</div>
+  	</section>
+  
+     
+
+ 		
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="js/particles.min.js"></script>
+   <script src="js/app.js"></script>
+
+    
+    <script src='js/TweenMax.min.js'></script>
+
+
+    <script type="text/javascript">
+      jQuery(function( $ ){
+  
+    var $body=$("body"),
+  $TweenMax=$("h1");
+  
+  TweenMax.set( $TweenMax, { transformStyle: 'preserve-3d'  }); 
+  
+  $body.mousemove(function(e) {
+    
+    var sxPos =  e.pageX / $body.width()  * 100 - 50;
+    var syPos =  e.pageY / $body.height() * 100 - 50;
+    console.log("x:" + sxPos + ", y:" + syPos);
+    TweenMax.to( $TweenMax, 1, { rotationY: 0.25 * sxPos, rotationX: 0.50 * syPos, rotationZ: '-0.1', transformPerspective:500, transformOrigin:'center center' });
+    
+
+  });
+
+
+});
+    </script>
+
+  </body>
+</html>
